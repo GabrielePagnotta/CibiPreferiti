@@ -30,4 +30,16 @@ Console.WriteLine(cibi[4]);
 
 //Stampate a video anche il cibo di mezza classifica, cioè che si trova nella posizione mediana. Attenzione: gestire anche il caso se aveste una classifica con un numero di elementi pari. In questo caso vanno stampati i 2 elementi in centro alla vostra classifica:
 
-Console.WriteLine(cibi[cibi.Length/2]);
+
+
+for(int i = 0;i < cibi.Length; i++)
+{
+    if(cibi.Length % 2 == 0)
+    {
+        Console.WriteLine(cibi[cibi.Length / 2]);
+    }
+    else
+    {
+        Console.WriteLine(cibi[cibi.Length / 2 - 1]);
+    }
+}
