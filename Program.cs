@@ -1,6 +1,7 @@
 ﻿string[] cibi = { "lasagne al ragu", "pasta al pesto", "gnocchi", "pizza margherita", "spaghetti al pomodoro" };
 
 
+
 //La lunghezza della classifica:
 
 var lunghezza = cibi.Length;
@@ -31,15 +32,12 @@ Console.WriteLine(cibi[4]);
 //Stampate a video anche il cibo di mezza classifica, cioè che si trova nella posizione mediana. Attenzione: gestire anche il caso se aveste una classifica con un numero di elementi pari. In questo caso vanno stampati i 2 elementi in centro alla vostra classifica:
 
 
-
-for(int i = 0;i < cibi.Length; i++)
+if(cibi.Length % 2 == 0)
 {
-    if(cibi.Length % 2 == 0)
-    {
-        Console.WriteLine(cibi[cibi.Length / 2]);
-    }
-    else
-    {
-        Console.WriteLine(cibi[cibi.Length / 2 - 1]);
-    }
+    Console.WriteLine(cibi[cibi.Length / 2 - 1]);
+    Console.WriteLine(cibi[cibi.Length / 2]);
+}
+else
+{
+    Console.WriteLine(cibi[cibi.Length / 2]);
 }
